@@ -96,10 +96,10 @@ def build_factor_graph(frame1_bboxes, frame2_bboxes, frame1_histograms, frame2_h
     Funkcja do budowania grafu czynników.
 
     Parametry:
-    - frame1_bboxes (list): Lista zawierająca bounding boxy dla pierwszej ramki.
-    - frame2_bboxes (list): Lista zawierająca bounding boxy dla drugiej ramki.
-    - frame1_histograms (list): Lista histogramów dla pierwszej ramki.
-    - frame2_histograms (list): Lista histogramów dla drugiej ramki.
+    - frame1_bboxes (list): Lista zawierająca bounding boxy dla pierwszej klatki.
+    - frame2_bboxes (list): Lista zawierająca bounding boxy dla drugiej klatki.
+    - frame1_histograms (list): Lista histogramów dla pierwszej klatki.
+    - frame2_histograms (list): Lista histogramów dla drugiej klatki.
     - params (dict): Słownik zawierający parametry konfiguracyjne.
 
     Zwraca:
@@ -110,7 +110,7 @@ def build_factor_graph(frame1_bboxes, frame2_bboxes, frame1_histograms, frame2_h
     frame1_len = len(frame1_bboxes)
     frame2_len = len(frame2_bboxes)
 
-    # Dodawanie węzłów zmiennych dla każdego bounding boxa w drugiej ramce
+    # Dodawanie węzłów zmiennych dla każdego bounding boxa w drugiej klatce
     for index in range(frame2_len):
         G.add_node(f'X_{index}')
 
